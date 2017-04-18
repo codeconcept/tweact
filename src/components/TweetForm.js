@@ -6,7 +6,6 @@ class TweetForm extends React.Component {
         super();
         this.createTweet = this.createTweet.bind(this);
         this.handleTextChange = this.handleTextChange.bind(this);
-        this.textLength = 0;
         this.state = {
             textContent: ''
         }
@@ -20,6 +19,7 @@ class TweetForm extends React.Component {
             text: tweetContent,
             date: Date.now()
         }
+        this.props.addTweet(tweet);
         this.tweetText.value = '';
         console.log(tweet);
     }

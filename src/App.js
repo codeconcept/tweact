@@ -12,9 +12,19 @@ class App extends Component {
   constructor() {
     super();
     this.resetTweets = this.resetTweets.bind(this);
+    this.addTweet = this.addTweet.bind(this);
     this.state = {
       tweets: PreviousTweets
     }
+  }
+
+  addTweet(tweet) {
+    // retrieve state of tweets
+    let currentTweets = {...this.state.tweets};
+    const idSuffix = Object.keys(currentTweets).length + 1;
+    const id = `tweet${idSuffix}`;
+    currentTweets[id] = tweet;
+    this.setState({ tweets: currentTweets});
   }
 
   resetTweets() {
@@ -34,8 +44,8 @@ class App extends Component {
             <Trends />
           </div>
           <div className="col-md-7 column-two">
-            <TweetForm />
-            <AllTweets tweets={PreviousTweets} />
+            <TweetForm addTweet={this.addTweet} />
+            <AllTweets tweets={this.state.tweets} />
           </div>
           <div className="col-md-2 column-three">
             suggestions
