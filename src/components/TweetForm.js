@@ -18,7 +18,7 @@ class TweetForm extends React.Component {
             name: 'Samir Medjdoub',
             handle: '@meanjsfr',
             text: tweetContent,
-            date: Date.now()
+            date: new Date()
         }
         this.props.addTweet(tweet);
         this.tweetText.value = '';

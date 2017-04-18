@@ -3,7 +3,7 @@ module.exports = {
         id: 1,
         name:'Perceval',
         handle:'@kaamelott',
-        date:'04-15-2017',
+        date:'2017-04-15',
         text: 'C\'est pas faux'
     },
     tweet2: {
