@@ -9,7 +9,7 @@ class Tweet extends React.Component {
         console.log(distanceInWordsToNow(new Date(this.props.date), {locale: frLocale}));
         return (
             <div className='vertical-spacer'>
-                <div>
+                <div className='small'>
                     <b>{this.props.name}</b> &nbsp;
                     {this.props.handle}  &nbsp;
                     il y a {distanceInWordsToNow(new Date(this.props.date), {locale: frLocale})} &nbsp;

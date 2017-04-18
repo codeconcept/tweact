@@ -1,18 +1,16 @@
 import React from 'react';
 import Tweet from './Tweet';
 
+const createTweetFromProps = (tweet) => {
+    return (<Tweet key={tweet.id} name={tweet.name} handle={tweet.handle} text={tweet.text} date={tweet.date} />);    
+}
+
 const AllTweets = (props) => {
     return (
         <div>
             { 
                 Object.keys(props.tweets)
-                      .map(t => <Tweet key={props.tweets[t].id} 
-                                        name={props.tweets[t].name} 
-                                        handle={props.tweets[t].handle} 
-                                        text={props.tweets[t].text} 
-                                        date={props.tweets[t].date}
-                                        
-                                />)
+                      .map(t => createTweetFromProps(props.tweets[t]))
             }
         </div>
     );

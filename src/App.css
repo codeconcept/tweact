@@ -38,3 +38,7 @@
 .vertical-spacer {
   margin-bottom: 20px;
 }
+
+.small {  
+  font-size: small;
+}
