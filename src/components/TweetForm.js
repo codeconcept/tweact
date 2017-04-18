@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 
 class TweetForm extends React.Component {
     constructor() {
@@ -21,8 +22,11 @@ class TweetForm extends React.Component {
     render() {
         return (
             <form onSubmit={(e) => this.createTweet(e)}>
-                <textarea ref={(input) => { this.tweetText = input}} placeholder="votre tweet"></textarea><br/>
-                <button type="submit">poster</button>                
+                <textarea ref={(input) => { this.tweetText = input}} 
+                    placeholder="votre tweet"
+                    className="full-width"
+                    ></textarea><br/>
+                <button type="submit" className="btn btn-xs btn-primary">poster</button>                
             </form>
         );
     }
