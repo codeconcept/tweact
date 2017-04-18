@@ -23,6 +23,8 @@ class App extends Component {
     let currentTweets = {...this.state.tweets};
     const idSuffix = Object.keys(currentTweets).length + 1;
     const id = `tweet${idSuffix}`;
+    tweet.id = idSuffix;
+    console.log('tweet', tweet);
     currentTweets[id] = tweet;
     this.setState({ tweets: currentTweets});
   }

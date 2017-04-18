@@ -15,7 +15,8 @@ class TweetForm extends React.Component {
         evt.preventDefault();
         const tweetContent = this.tweetText.value;
         const tweet = {
-            author: '@meanjsfr',
+            name: 'Samir Medjdoub',
+            handle: '@meanjsfr',
             text: tweetContent,
             date: Date.now()
         }

@@ -1,23 +1,23 @@
 module.exports = {
     tweet1: {
         id: 1,
-        name:'Samir Medjdoub',
-        handle:'@meanjsfr',
+        name:'Perceval',
+        handle:'@kaamelott',
         date:'04-15-2017',
-        text: 'Premier tweet :)'
+        text: 'C\'est pas faux'
     },
     tweet2: {
         id: 2,
-        name:'Samir Medjdoub',
-        handle:'@meanjsfr',
+        name:'Pierre Desproges',
+        handle:'@pdgs',
         date:'04-15-2017',
-        text: 'Plutôt que lire les avis sur les frameworks, il vaut mieux consacrer quelques après-midi à les essayer'
+        text: 'On peut rire de tout, mais pas avec tout le monde'
     },
     tweet3: {
         id: 3,
-        name:'Samir Medjdoub',
-        handle:'@meanjsfr',
+        name:'Leonard de Vinci',
+        handle:'@davinci',
         date:'04-15-2017',
-        text: 'De ES5 à ES6 : beaucoup de nouveautés. De ES6 à TypeScript : du gâteau + le confort en plus'
+        text: 'Je vous laisse, je vais faire une machine'
     }
 };
