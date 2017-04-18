@@ -6,9 +6,17 @@ class TweetForm extends React.Component {
         super();
         this.createTweet = this.createTweet.bind(this);
         this.handleTextChange = this.handleTextChange.bind(this);
+        this.generateDate = this.generateDate.bind(this);
         this.state = {
             textContent: ''
         }
+    }
+
+    generateDate() {
+        const date = new Date();
+        const formattedDate = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+        console.log('generateDate', formattedDate);
+        return formattedDate;
     }
 
     createTweet(evt) {
@@ -18,11 +26,11 @@ class TweetForm extends React.Component {
             name: 'Samir Medjdoub',
             handle: '@meanjsfr',
             text: tweetContent,
-            date: new Date()
+            date: this.generateDate() 
         }
+        console.log('TweetForm tweet', tweet);
         this.props.addTweet(tweet);
         this.tweetText.value = '';
-        console.log(tweet);
     }
 
     handleTextChange(evt) {

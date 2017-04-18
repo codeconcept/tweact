@@ -6,7 +6,7 @@ import PreviousTweets from './tweets';
 import AllTweets from './components/AllTweets';
 import Trends from './components/Trends';
 import UserSummary from './components/UserSummary';
-
+import base from './base';
 
 class App extends Component {
   constructor() {
@@ -18,13 +18,24 @@ class App extends Component {
     }
   }
 
+  componentWillMount() {
+    this.ref = base.syncState('/tweets', {
+      context: this,
+      state: 'tweets'
+    });
+    console.log('this.ref', this.ref);
+  }
+
+  componentWillUnmount() {
+    base.removeBinding(this.ref);
+  }
+
   addTweet(tweet) {
     // retrieve state of tweets
     let currentTweets = {...this.state.tweets};
     const idSuffix = Object.keys(currentTweets).length + 1;
     const id = `tweet${idSuffix}`;
     tweet.id = idSuffix;
-    console.log('tweet', tweet);
     currentTweets[id] = tweet;
     this.setState({ tweets: currentTweets});
   }

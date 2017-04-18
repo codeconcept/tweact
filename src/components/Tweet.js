@@ -5,8 +5,7 @@ import  frLocale from 'date-fns/locale/fr';
 
 class Tweet extends React.Component {
     render() {
-        console.log('this.props.date', this.props.date);
-        console.log(distanceInWordsToNow(new Date(this.props.date), {locale: frLocale}));
+        // console.log(distanceInWordsToNow(new Date(this.props.date), {locale: frLocale}));
         return (
             <div className='vertical-spacer'>
                 <div className='small'>

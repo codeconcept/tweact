@@ -2,6 +2,7 @@ import React from 'react';
 import Tweet from './Tweet';
 
 const createTweetFromProps = (tweet) => {
+    // console.log('createTweetFromProps', tweet); 
     return (<Tweet key={tweet.id} name={tweet.name} handle={tweet.handle} text={tweet.text} date={tweet.date} />);    
 }
 
