@@ -11,7 +11,7 @@ module.exports = {
         name:'Samir Medjdoub',
         handle:'@meanjsfr',
         date:'04-15-2017',
-        text: 'Plutôt que lire les avis sur les framework, il vaut mieux consacrer quelques après-midi à les essayer'
+        text: 'Plutôt que lire les avis sur les frameworks, il vaut mieux consacrer quelques après-midi à les essayer'
     },
     tweet3: {
         id: 3,

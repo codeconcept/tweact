@@ -5,6 +5,11 @@ class TweetForm extends React.Component {
     constructor() {
         super();
         this.createTweet = this.createTweet.bind(this);
+        this.handleTextChange = this.handleTextChange.bind(this);
+        this.textLength = 0;
+        this.state = {
+            textContent: ''
+        }
     }
 
     createTweet(evt) {
@@ -19,14 +24,19 @@ class TweetForm extends React.Component {
         console.log(tweet);
     }
 
+    handleTextChange(evt) {
+        this.setState({ textContent: evt.target.value });
+    }
+
     render() {
         return (
             <form onSubmit={(e) => this.createTweet(e)}>
                 <textarea ref={(input) => { this.tweetText = input}} 
                     placeholder="votre tweet"
                     className="full-width"
+                    onChange={this.handleTextChange}
                     ></textarea><br/>
-                <button type="submit" className="btn btn-xs btn-primary">poster</button>                
+                <button type="submit" className="btn btn-xs btn-primary" disabled={!this.state.textContent}>poster</button>                
             </form>
         );
     }
