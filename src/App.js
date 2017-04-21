@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import TweetForm from './components/TweetForm';
-import Menu from './components/Menu';
 import PreviousTweets from './tweets';
 import AllTweets from './components/AllTweets';
 import Trends from './components/Trends';
@@ -47,9 +46,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
-          <Menu resetTweets={this.resetTweets} />
-        </div>
+        
         <div className="row">          
           <div className="col-md-3 column-one">
             résumé utilisateur
